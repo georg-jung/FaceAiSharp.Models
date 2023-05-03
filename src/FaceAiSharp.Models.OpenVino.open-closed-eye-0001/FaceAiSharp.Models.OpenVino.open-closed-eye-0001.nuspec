@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Automatically generated-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.12">
+    <id>FaceAiSharp.Models.OpenVino.open-closed-eye-0001</id>
+    <title>FaceAiSharp.Models.OpenVino.open-closed-eye-0001</title>
+    <version>0.20220116.1</version>
+    <authors>$authors$</authors>
+    <copyright>$copyright$</copyright>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
+    <repository type="git" url="https://github.com/georg-jung/FaceAiSharp.Models" />
+    <summary>$summary$</summary>
+    <tags>face face-detection eye eyes open-eyes closed-eyes detection landmarks onnx onnxruntime ai ml openvino model image images artificial-intelligence</tags>
+    <releaseNotes>$releaseNotes$</releaseNotes>
+    <description>This package provides OpenVino's open-closed-eye-0001 model. It is a fully convolutional network for recognition of eye state (open, closed).</description>
+
+    <dependencies>
+      <group targetFramework="netstandard2.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="**/onnx/*.*" buildAction="None" copyToOutput="true" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="*.onnx" target="contentFiles\any\any\onnx" />
+    <file src="README.md" target="README.md" />
+    <!--empty directory in lib to avoid nuget adding a reference-->
+    <file src="$repo_path$src\_._" target="lib/netstandard2.0/_._" />
+  </files>
+</package>
