@@ -1,0 +1,29 @@
+name: Build Packages
+
+on:
+  workflow_call:
+    inputs:
+      build-ref:
+        required: true
+        type: string
+  workflow_dispatch:
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+
+jobs:
+  pack:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        lfs: true
+    - run: dotnet pack src/FaceAiSharp.Models.ArcFace.LResNet100E-IR/FaceAiSharp.Models.ArcFace.LResNet100E-IR.csproj -c Release
+    - uses: actions/upload-artifact@v3
+      with:
+        name: nupkgs
+        path: bin/Packages/Release/**/*
