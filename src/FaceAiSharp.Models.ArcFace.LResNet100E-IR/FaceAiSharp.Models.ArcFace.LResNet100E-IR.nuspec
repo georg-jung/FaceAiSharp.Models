@@ -4,7 +4,7 @@
   <metadata minClientVersion="2.12">
     <id>FaceAiSharp.Models.ArcFace.LResNet100E-IR</id>
     <title>FaceAiSharp.Models.ArcFace.LResNet100E-IR</title>
-    <version>0.20220210.1</version>
+    <version>0.20220210.2</version>
     <authors>$authors$</authors>
     <copyright>$copyright$</copyright>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -18,6 +18,9 @@
     <dependencies>
       <group targetFramework="netstandard2.0" />
     </dependencies>
+    <contentFiles>
+      <files include="**/onnx/*.*" buildAction="None" copyToOutput="true" />
+    </contentFiles>
   </metadata>
   <files>
     <file src="arcfaceresnet100-8.onnx" target="contentFiles\any\any\onnx" />
