@@ -23,7 +23,7 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="arcfaceresnet100-8.onnx" target="contentFiles\any\any\onnx" />
+    <file src="*.onnx" target="contentFiles\any\any\onnx" />
     <!--empty directory in lib to avoid nuget adding a reference-->
     <file src="$repo_path$src\_._" target="lib/netstandard2.0/_._" />
   </files>
