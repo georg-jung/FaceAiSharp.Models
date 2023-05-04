@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Automatically generated-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.12">
+    <id>FaceAiSharp.Models.ArcFace.LResNet100E-IR-int8</id>
+    <title>FaceAiSharp.Models.ArcFace.LResNet100E-IR-int8</title>
+    <version>0.20230419.1</version>
+    <authors>$authors$</authors>
+    <copyright>$copyright$</copyright>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
+    <repository type="git" url="https://github.com/georg-jung/FaceAiSharp.Models" />
+    <summary>$summary$</summary>
+    <tags>arcface face face-recognition recognition onnx onnxruntime int8 quantized ai ml model image images artificial-intelligence</tags>
+    <releaseNotes>$releaseNotes$</releaseNotes>
+    <description>This package provides the int8 quantized ArcFace ONNX model from the official ONNX Model Zoo. ArcFace is a state-of-the-art face recognition model that is used to infer embeddings for advanced face identification and analysis applications.</description>
+
+    <dependencies>
+      <group targetFramework="netstandard2.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="**/onnx/*.*" buildAction="Content" copyToOutput="true" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="*.onnx" target="contentFiles\any\any\onnx" />
+    <!--empty directory in lib to avoid nuget adding a reference-->
+    <file src="$repo_path$src\_._" target="lib/netstandard2.0/_._" />
+  </files>
+</package>
