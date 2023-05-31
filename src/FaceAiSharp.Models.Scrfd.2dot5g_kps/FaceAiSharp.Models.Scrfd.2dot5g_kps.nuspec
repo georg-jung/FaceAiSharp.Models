@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Automatically generated-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.12">
+    <id>FaceAiSharp.Models.Scrfd.2dot5g_kps</id>
+    <title>FaceAiSharp.Models.Scrfd.2dot5g_kps</title>
+    <version>0.20230205.2</version>
+    <authors>$authors$</authors>
+    <copyright>$copyright$</copyright>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <repository type="git" url="https://github.com/georg-jung/FaceAiSharp.Models" />
+    <summary>$summary$</summary>
+    <tags>scrfd insightface face face-detection detection landmarks alignment onnx onnxruntime ai ml model image images artificial-intelligence</tags>
+    <releaseNotes>$releaseNotes$</releaseNotes>
+    <description>This package provides an SCRFD 2.5G KPS model with dynamic shapes, downloaded from the official github.com/deepinsight/insightface repository. SCRFD is a state-of-the-art face detection model that also provides facial landmarks/facial keypoints.</description>
+
+    <dependencies>
+      <group targetFramework="netstandard2.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="**/onnx/*.*" buildAction="Content" copyToOutput="true" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="*.onnx" target="contentFiles\any\any\onnx" />
+    <file src="LICENSE.md" target="LICENSE.md" />
+    <!--empty directory in lib to avoid nuget adding a reference-->
+    <file src="$repo_path$src\_._" target="lib/netstandard2.0/_._" />
+  </files>
+</package>
