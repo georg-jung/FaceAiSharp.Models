@@ -24,6 +24,7 @@ jobs:
         lfs: true
     - run: dotnet pack src/FaceAiSharp.Models.ArcFace.LResNet100E-IR/FaceAiSharp.Models.ArcFace.LResNet100E-IR.csproj -c Release
     - run: dotnet pack src/FaceAiSharp.Models.ArcFace.LResNet100E-IR-int8/FaceAiSharp.Models.ArcFace.LResNet100E-IR-int8.csproj -c Release
+    - run: dotnet pack src/FaceAiSharp.Models.Scrfd.2dot5g_kps/FaceAiSharp.Models.Scrfd.2dot5g_kps.csproj -c Release
     - run: dotnet pack src/FaceAiSharp.Models.Scrfd.2dot5g_kps_640x640/FaceAiSharp.Models.Scrfd.2dot5g_kps_640x640.csproj -c Release
     - run: dotnet pack src/FaceAiSharp.Models.OpenVino.open-closed-eye-0001/FaceAiSharp.Models.OpenVino.open-closed-eye-0001.csproj -c Release
     - uses: actions/upload-artifact@v3
